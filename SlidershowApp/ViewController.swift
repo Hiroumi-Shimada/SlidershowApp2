@@ -107,11 +107,11 @@ class ViewController: UIViewController {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
         
         resultViewController.resultIndex = self.imageIndex
-        startStop.isEnabled = false
+         timer.invalidate()
         
     }
     @IBAction func unwind(_ segue: UIStoryboardSegue){
-         startStop.isEnabled = true
+         timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
     }
    
     
