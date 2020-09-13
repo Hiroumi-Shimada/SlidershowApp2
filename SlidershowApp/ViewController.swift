@@ -111,7 +111,7 @@ class ViewController: UIViewController {
         
     }
     @IBAction func unwind(_ segue: UIStoryboardSegue){
-         timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+         
     }
    
     
