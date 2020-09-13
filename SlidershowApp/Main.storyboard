@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlidershowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LB-pD-Yp8">
+                                <rect key="frame" x="66" y="218" width="282" height="226"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="282" id="7qA-rJ-dEE"/>
+                                    <constraint firstAttribute="height" constant="226" id="Ln7-fA-nd9"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="liU-wU-GzN" kind="show" id="y9B-ES-xji"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="top" distribution="fillEqually" spacing="93" translatesAutoresizingMaskIntoConstraints="NO" id="FHJ-fG-CC3">
+                                <rect key="frame" x="67.5" y="705" width="279" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSj-no-yv7">
+                                        <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
+                                        <state key="normal" title="戻る"/>
+                                        <connections>
+                                            <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wJk-35-RPk"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="s34-Gk-yF1">
+                                        <rect key="frame" x="124" y="0.0" width="31" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdN-zh-BD7">
+                                                <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
+                                                <state key="normal" title="再生"/>
+                                                <connections>
+                                                    <action selector="startStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C0g-bE-Mhw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uM6-Lb-XHX">
+                                        <rect key="frame" x="248" y="0.0" width="31" height="30"/>
+                                        <state key="normal" title="進む"/>
+                                        <connections>
+                                            <action selector="next:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UmP-8l-7EB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Qd0-FL-e7f"/>
+                                    <constraint firstAttribute="width" constant="279" id="TH0-cL-VHy"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="tozan_trekking_man" translatesAutoresizingMaskIntoConstraints="NO" id="d2c-uK-Prd">
+                                <rect key="frame" x="66" y="218" width="282" height="226"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="226" id="sa9-h9-4xh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FHJ-fG-CC3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="88u-jf-0pX"/>
+                            <constraint firstItem="1LB-pD-Yp8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="8Kx-IP-XeY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FHJ-fG-CC3" secondAttribute="bottom" constant="127" id="8MS-FR-fAn"/>
+                            <constraint firstItem="d2c-uK-Prd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hnl-34-gIv"/>
+                            <constraint firstItem="1LB-pD-Yp8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="174" id="bUU-Ma-hrc"/>
+                            <constraint firstItem="d2c-uK-Prd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="huq-Dh-c0o"/>
+                            <constraint firstItem="d2c-uK-Prd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="174" id="jdq-4G-R2S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backoutlet" destination="FSj-no-yv7" id="hpi-Bh-YD9"/>
+                        <outlet property="imageData" destination="d2c-uK-Prd" id="608-ms-zrs"/>
+                        <outlet property="nextoutlet" destination="uM6-Lb-XHX" id="Uwl-DW-4lK"/>
+                        <outlet property="startStop" destination="zdN-zh-BD7" id="o1m-RP-65Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="78K-tA-30a">
+            <objects>
+                <viewController id="liU-wU-GzN" customClass="ResultViewController" customModule="SlidershowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="18G-Px-9eA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mwk-Iw-CGp">
+                                <rect key="frame" x="20" y="37" width="374" height="549"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVv-pd-yRi">
+                                <rect key="frame" x="150" y="699" width="114" height="30"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="oOn-Zj-xYJ" kind="unwind" unwindAction="unwind:" id="uTU-KV-RMg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dVv-pd-yRi" firstAttribute="top" secondItem="Mwk-Iw-CGp" secondAttribute="bottom" constant="113" id="8AV-O8-KfM"/>
+                            <constraint firstItem="Enf-a1-zXB" firstAttribute="trailing" secondItem="dVv-pd-yRi" secondAttribute="trailing" constant="150" id="AlT-tj-bOs"/>
+                            <constraint firstItem="Enf-a1-zXB" firstAttribute="bottom" secondItem="dVv-pd-yRi" secondAttribute="bottom" constant="79" id="Dkj-5i-xzA"/>
+                            <constraint firstItem="Mwk-Iw-CGp" firstAttribute="leading" secondItem="Enf-a1-zXB" secondAttribute="leading" constant="20" id="Twh-dW-hxT"/>
+                            <constraint firstItem="Enf-a1-zXB" firstAttribute="trailing" secondItem="Mwk-Iw-CGp" secondAttribute="trailing" constant="20" id="ZLb-U6-AWW"/>
+                            <constraint firstItem="dVv-pd-yRi" firstAttribute="leading" secondItem="Enf-a1-zXB" secondAttribute="leading" constant="150" id="jcA-Iz-MLG"/>
+                            <constraint firstItem="Mwk-Iw-CGp" firstAttribute="top" secondItem="Enf-a1-zXB" secondAttribute="top" constant="37" id="zbq-Ju-jwl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Enf-a1-zXB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8bS-6V-I2K"/>
+                    <connections>
+                        <outlet property="resultImage" destination="Mwk-Iw-CGp" id="veE-uv-ryU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1t-L2-wmf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="oOn-Zj-xYJ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1157.9710144927537" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tozan_trekking_man" width="877" height="1103"/>
+    </resources>
+</document>
