@@ -23,9 +23,7 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
 
     let resultArray = imageArray[resultIndex]
-        resultImage.image = UIImage(named : resultArray)
-
-        
+        resultImage.image = UIImage(named: resultArray)
         // Do any additional setup after loading the view.
     }
     

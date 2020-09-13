@@ -67,8 +67,7 @@ class ViewController: UIViewController {
     var timer: Timer!
     
     @IBOutlet weak var startStop: UIButton!
-    
-    
+   
     @IBAction func startStop(_ sender: Any) {
         
         
@@ -108,11 +107,16 @@ class ViewController: UIViewController {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
         
         resultViewController.resultIndex = self.imageIndex
-       
-    }
-    @IBAction func unwind(_ segue: UIStoryboardSegue){
+        startStop.isEnabled = false
         
     }
+    @IBAction func unwind(_ segue: UIStoryboardSegue){
+         startStop.isEnabled = true
+    }
+   
+    
+
+
     
     
 }
