@@ -107,7 +107,7 @@ class ViewController: UIViewController {
         let resultViewController:ResultViewController = segue.destination as! ResultViewController
         
         resultViewController.resultIndex = self.imageIndex
-         timer.invalidate()
+         timer?.invalidate()
         
     }
     @IBAction func unwind(_ segue: UIStoryboardSegue){
