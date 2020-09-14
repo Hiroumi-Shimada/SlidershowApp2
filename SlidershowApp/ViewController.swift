@@ -108,6 +108,7 @@ class ViewController: UIViewController {
         
         resultViewController.resultIndex = self.imageIndex
          timer?.invalidate()
+         timer = nil
         
     }
     @IBAction func unwind(_ segue: UIStoryboardSegue){
