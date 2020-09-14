@@ -111,7 +111,10 @@ class ViewController: UIViewController {
         
     }
     @IBAction func unwind(_ segue: UIStoryboardSegue){
-         
+         startStop.setTitle("再生", for: .normal)
+                    nextoutlet.isEnabled = true
+                    backoutlet.isEnabled = true
+        
     }
    
     
